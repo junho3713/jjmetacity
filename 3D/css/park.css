@@ -1,0 +1,331 @@
+/*park_gift html*/
+/*기념품*/
+
+  #giftinfobtn{
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    transform: translate(-25%, -45%);
+    display: none;
+    width: 300px;
+    height: 565px;
+    z-index: 999;
+}
+
+#giftinfobtn .giftinfo-btn {
+  position: absolute;
+  bottom:80px;
+}
+
+#giftinfobtn .giftinfo-btn img{
+  width: 80%;
+}
+/* 닫기버튼 */
+  #giftinfobtn #done{
+    position: absolute;
+    top:80px;
+    right:0;
+    cursor: pointer;
+  }
+
+  #giftinfobtn #done a img{
+    width: 50%;
+    position: relative;
+    left: 60px;
+  }
+
+
+/* // park_gift html*/
+
+.screen-vid{
+  display:none;
+  position:absolute;
+  z-index:99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+.screen-vid iframe{
+  width:1100px;
+  height:700px;
+}
+
+/* 닫기버튼 */
+.screen-vid #done{
+  position: absolute;
+  bottom:-80px;
+  right:540px;
+  cursor: pointer;
+}
+
+.screen-vid #done a img{
+  width: 50%;
+  position: relative;
+  left: 50px;
+}
+/* park_screen html */
+
+
+/* //park_screen html */
+
+/*  park_tea html*/
+
+/*왕 설명 팝업*/
+
+#kinginfobtn{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+  display: none;
+  width: 600px;
+  height: 600px;
+  z-index: 999;
+}
+
+#kinginfobtn .kinginfo-btn{
+  position: absolute;
+  bottom:0
+}
+#kinginfobtn .kinginfo-btn img{
+  width: 70%;
+}
+/* 닫기버튼 */
+#kinginfobtn .kinginfo-btn #done{
+  position: absolute;
+  top:15%;
+  right:15%;
+  transform: translate(-15%, -15%);
+  cursor: pointer;
+}
+
+#kinginfobtn .kinginfo-btn #done a img{
+  width: 50%;
+  position: relative;
+  left: 50px;
+}
+/* //왕 설명 팝업 */
+
+
+/*  //park_tea html*/
+
+
+/*  park_start html*/
+
+
+/*왕에대한 설명*/
+#kingbtn{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-40%, -45%);
+  display: none;
+  width: 880px;
+  height: 600px;
+  z-index: 999;
+}
+
+#kingbtn .king-btn {
+position: absolute;
+bottom:0;
+}
+
+/* 닫기버튼 */
+#kingbtn #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+#kingbtn #done a img{
+  width: 50%;
+  position: relative;
+  right:100px;
+  top:210px
+}
+/*// 왕에대한 설명*/ 
+
+
+
+/*왕에대한 설명2*/
+#kingbtn2{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-40%, -45%);
+  display: none;
+  width: 880px;
+  height: 600px;
+  z-index: 999;
+}
+
+#kingbtn2 .king-btn2 {
+position: absolute;
+bottom:0;
+}
+
+/* 닫기버튼 */
+#kingbtn2 #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+#kingbtn2 #done a img{
+  width: 50%;
+  position: relative;
+  right:100px;
+  top:210px
+}
+/*// 왕에대한 설명2*/ 
+
+
+/*왕에대한 설명3*/
+#kingbtn3{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-40%, -45%);
+  display: none;
+  width: 880px;
+  height: 600px;
+  z-index: 999;
+}
+
+#kingbtn3 .king-btn3 {
+position: absolute;
+bottom:0;
+}
+
+/* 닫기버튼 */
+#kingbtn3 #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+#kingbtn3 #done a img{
+  width: 50%;
+  position: relative;
+  right:100px;
+  top:210px
+}
+/*// 왕에대한 설명3*/ 
+
+
+
+/* 표지판 행사안내*/
+
+#infobtn{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  display: none;
+  width: 600px;
+  height: 600px;
+  z-index: 999;
+}
+
+#infobtn .infobtn-btn {
+position: absolute;
+bottom:0;
+}
+
+/* 닫기버튼 */
+#infobtn #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+#infobtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 60px;
+}
+/* //표지판 행사안내*/
+
+
+/*  //park_start html*/
+
+
+
+/*start기념품 표지판 안내*/
+
+#infobtn2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 543px;
+  height: 765px;
+  z-index: 999;
+}
+
+#infobtn2 .info-btn2 img{
+  width: 96%;
+}
+
+
+#infobtn2 .info-btn2 {
+position: absolute;
+bottom:0;
+}
+
+/* 닫기버튼 */
+#infobtn2 #done{
+  position: absolute;
+  top:30px;
+  right:-40px;
+  cursor: pointer;
+}
+
+#infobtn2 #done a img{
+  width: 50%;
+  position: relative;
+  left: 60px;
+}
+
+/* //표지판 행사안내2 */
+
+
+
+/*기념품 표지판 안내*/
+
+#giftinfobtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 543px;
+  height: 765px;
+  z-index: 999;
+}
+
+#giftinfobtn .info-btn2 img{
+  width: 96%;
+}
+
+
+#infobtn2 .info-btn2 {
+position: absolute;
+bottom:0;
+}
+
+/* 닫기버튼 */
+#infobtn2 #done{
+  position: absolute;
+  top:30px;
+  right:-40px;
+  cursor: pointer;
+}
+
+#infobtn2 #done a img{
+  width: 50%;
+  position: relative;
+  left: 60px;
+}

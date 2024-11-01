@@ -1,0 +1,139 @@
+/* 한복 팝업 */
+/* 한복 설명 */
+#hanbokbtn{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  display: none;
+  width: 1070px;
+  height: 700px;
+  z-index: 999;
+}
+
+#hanbokbtn .hanbok-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+
+#hanbokbtn #done{
+  position: absolute;
+  top:200px;
+  right:100px;
+  cursor: pointer;
+}
+
+#hanbokbtn #done a img{
+  width: 60%;
+  position: relative;
+  left: 50px;
+}
+/* //한복설명 */
+
+/* 밀키트가격 안내 */
+#milbtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 840px;
+    height: 640px;
+    z-index: 999;
+  }
+  
+  #milbtn .mil-btn{
+    position: absolute;
+    bottom:0;
+  }
+  
+  /* 닫기버튼 */
+  
+  #milbtn #done{
+    position: absolute;
+    top:34px;
+    right:45px;
+    cursor: pointer;
+  }
+  
+  #milbtn #done a img{
+    width: 50%;
+    position: relative;
+    left: 50px;
+  }
+  /* //밀키트가격 안내 */
+
+
+/* 도자기가격 안내 */
+#goodsbtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 840px;
+    height: 640px;
+    z-index: 999;
+  }
+  
+  #milbtn .goods-btn{
+    position: absolute;
+    bottom:0;
+  }
+  
+  /* 닫기버튼 */
+  
+  #goodsbtn #done{
+    position: absolute;
+    top:34px;
+    right:45px;
+    cursor: pointer;
+  }
+  
+  #goodsbtn #done a img{
+    width: 50%;
+    position: relative;
+    left: 50px;
+  }
+  /* //도자기가격 안내 */
+
+/* 한복가격 안내 */
+#pricebtn{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -45%);
+    display: none;
+    width: 980px;
+    height: 680px;
+    z-index: 999;
+  }
+  
+  #pricebtn .price-btn{
+    position: absolute;
+    bottom:0;
+  }
+  
+  /* 닫기버튼 */
+  
+  #pricebtn #done{
+    position: absolute;
+    top:180px;
+    right:15px;
+    cursor: pointer;
+  }
+  
+  #pricebtn #done a img{
+    width: 60%;
+    position: relative;
+    left: 50px;
+  }
+  /* //한복가격 안내 */
+
+
+/* //한복팝업 html*/
+
+
+       

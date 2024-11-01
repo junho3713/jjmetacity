@@ -1,0 +1,193 @@
+/* 어린이도서관 html*/
+
+
+/* 어린이 도서 팝업1 */
+
+#kidbookbbtn{
+position: absolute;
+top: 55%;
+left: 50%;
+transform: translate(-55%, -50%);
+display: none;
+width: 630px;
+height: 430px;
+z-index: 999;
+}
+
+#kidbookbbtn .kidbookb-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+
+#kidbookbbtn #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+
+#kidbookbbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 150px;
+  top:-50px;
+}
+/* //어린이 도서 팝업1 */
+
+
+
+/* 어린이 도서 팝업2 */
+
+#kidbookbbtn2{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    display: none;
+    width: 640px;
+    height: 430px;
+    z-index: 999;
+    }
+    
+    #kidbookbbtn2 .kidbookb-btn2{
+      position: absolute;
+      bottom:0;
+    }
+    
+    /* 닫기버튼 */
+    
+    #kidbookbbtn2 #done{
+      position: absolute;
+      top:0;
+      right:0;
+      cursor: pointer;
+    }
+    
+    #kidbookbbtn2 #done a img{
+      width: 50%;
+      position: relative;
+      left: 150px;
+      top:-50px;
+    }
+/* //어린이 도서 팝업2 */  
+
+
+/* //어린이도서관 html */
+
+
+/* 도서관 중앙 html*/
+
+
+/*도서관 중앙 이용안내시간*/
+
+#viewbtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 600px;
+  height: 600px;
+  z-index: 999;
+}
+
+#viewbtn .view-btn{
+  position: absolute;
+  bottom:0;
+}
+
+
+/* 닫기버튼 */
+
+#viewbtn #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+
+#viewbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 50px;
+}
+/* // 도서관 중앙 html*/
+
+/* 북콘서트 html*/
+
+/* 북콘서트 팝업 */
+
+#bookconbtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 600px;
+  height: 790px;
+  z-index: 999;
+}
+
+#bookconbtn .bookcon-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+
+#bookconbtn #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+
+#bookconbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 70px;
+  top:0;
+}
+
+/* // 북콘서트 팝업 */
+
+/* //북콘서트 html*/
+
+/* 어른도서관 html*/
+
+/*도서추천 팝업*/
+
+#adbookbtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 870px;
+  height: 640px;
+  z-index: 999;
+}
+#adbookbtn .adbook-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+#adbookbtn #done{
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+
+#adbookbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 90px;
+  top:0;
+}
+/* //도서추천 팝업 */      
+
+/* //어른도서관 html*/

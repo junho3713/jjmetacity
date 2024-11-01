@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한복팝업</title>
+    <link rel="icon" href="./img/jjmeta-favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/hanbok.css">
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+  <!-- 하단 메뉴 공통단 html에 작성 후 index.js로 이동후 공통관리 (해더, 푸터)-->
+  <div class="common">
+    <div class="top-header">
+      <div class="header-icon">
+        <div><a href="./lobby.html"><img src="./img/icon/home_icon.png" alt="Home"></a>
+          <p>로비이동</p>
+        </div>
+        <div class="map_icon"><a><img src="./img/icon/map_icon.png" alt="map"></a>
+          <p>지도보기</p>
+          <div class="header-list-map">
+            <div class="map-wrap">
+              <div class="map_list">
+                <a href="./park_start.html" class="map_item"><img src="./img/map_off(1).png" alt="야외대강당"></a>
+                <a href="./library_sub3.html" class="map_item"><img src="./img/map_off(2).png" alt="도서관"></a>
+              </div>
+              <div class="map_list">
+                <div class="map_item map_item2"><a href="./lobby.html"><img src="./img/map_off(4).png" alt="로비이동"></a></div>
+              </div>
+              <div class="map_list">
+                <a href="./hanbok_start.html" class="map_item"><img src="./img/map_off(3).png" alt=" 한복체험"></a>
+                <a href="./office_start.html" class="map_item"><img src="./img/map_off(5).png" alt="민원실"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><a href="#"><img src="./img/icon/hamburger_icon.png" alt="more"></a>
+          <p>더보기</p>
+          <ul class="header-list">
+            <li>리플렛보기</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 한복 설명보기 팝업 버튼 -->
+  <div id="hanbokbtn" class="hanbokbtn">
+    <div class="hanbok-btn"><a href="#"><img src="./img/hanbok_info.png" alt="한복설명"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/Close_icon2.png" alt="닫기"></a>
+    </div>
+  </div>
+  <!-- //한복 설명보기 팝업 버튼 -->
+
+
+  <!-- 한복 가격보기 팝업 버튼 -->
+  <div id="pricebtn" class="pricebtn">
+    <div class="price-btn"><a href="#"><img src="./img/hanbok_price.png" alt="한복요금"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/Close_icon2.png" alt="닫기"></a>
+    </div>
+  </div>
+  <!-- //한복 가격보기 팝업 버튼 -->  
+
+
+
+
+  <!-- background-color -->
+  <div class="background"></div>
+  <script>
+    $(document).ready(function(){
+      const panorama = new PANOLENS.ImagePanorama('./img/hanbok-start.jpg');
+      const viewer = new PANOLENS.Viewer({
+      output: 'console'});
+      viewer.add(panorama);
+      
+
+
+      //한복 설명 보기 버튼
+      var infospot1 = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon8.png');
+      infospot1.position.set(3790.62, -1265.09, -5000.00);
+      infospot1.addEventListener('click', function () {
+      infospot1.addHoverElement(document.getElementById('hanbokbtn'), 100);
+      });
+
+      //밀키트로 가까이 이동버튼
+      var infospot2 = new PANOLENS.Infospot(500, './img/icon/Move_icon20.png');
+      infospot2.position.set(73.80, -1341.76, -5000.00);
+      infospot2.addEventListener('click', function () {
+      window.location.href = './hanbok_goods.html'
+      });
+
+      //로비로 돌아가기 버튼
+      var infospot3 = new PANOLENS.Infospot(500, './img/icon/lobby_arrow.png');
+      infospot3.position.set(-224.50, -800.57, 5000.00);
+      infospot3.addEventListener('click', function () {
+      window.location.href = './lobby.html'
+      });
+
+      //한복 요금 보기 버튼
+      var infospot4 = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon14.png');
+      infospot4.position.set(5000.00, -1238.43, -2086.46);
+      infospot4.addEventListener('click', function () {
+      infospot4.addHoverElement(document.getElementById('pricebtn'), 100);
+      });
+
+
+      panorama.add(infospot1);
+      panorama.add(infospot2);
+      panorama.add(infospot3);
+      panorama.add(infospot4);
+
+
+    //한복설명 보기 팝업 열기*************
+    $(infospot1).click(function () {
+      $('.hanbokbtn').show();
+      $('.background').show();
+      });
+
+      // 한복설명 보기 팝업 끄기
+      $('.done').click(function () {
+      $('.hanbokbtn').hide();
+      $('.background').hide()
+      });
+
+    //한복가격 보기 팝업 열기*************
+    $(infospot4).click(function () {
+      $('.pricebtn').show();
+      $('.background').show();
+      });
+
+      // 한복가격 보기 팝업 끄기
+      $('.done').click(function () {
+      $('.pricebtn').hide();
+      $('.background').hide()
+      });
+      
+    });
+  </script>
+</body>
+</html>

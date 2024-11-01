@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야외대강당 : 스크린</title>
+    <link rel="icon" href="./img/jjmeta-favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/park.css">
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+  <!-- 하단 메뉴 공통단 html에 작성 후 index.js로 이동후 공통관리 (해더, 푸터)-->
+  <div class="common">
+    <div class="top-header">
+      <div class="header-icon">
+        <div><a href="./lobby.html"><img src="./img/icon/home_icon.png" alt="Home"></a>
+          <p>로비이동</p>
+        </div>
+        <div class="map_icon"><a><img src="./img/icon/map_icon.png" alt="map"></a>
+          <p>지도보기</p>
+          <div class="header-list-map">
+            <div class="map-wrap">
+              <div class="map_list">
+                <a href="./park_start.html" class="map_item"><img src="./img/map_off(1).png" alt="야외대강당"></a>
+                <a href="./library_sub3.html" class="map_item"><img src="./img/map_off(2).png" alt="도서관"></a>
+              </div>
+              <div class="map_list">
+                <div class="map_item map_item2"><a href="./lobby.html"><img src="./img/map_off(4).png" alt="로비이동"></a></div>
+              </div>
+              <div class="map_list">
+                <a href="./hanbok_start.html" class="map_item"><img src="./img/map_off(3).png" alt=" 한복체험"></a>
+                <a href="./office_start.html" class="map_item"><img src="./img/map_off(5).png" alt="민원실"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><a href="#"><img src="./img/icon/hamburger_icon.png" alt="more"></a>
+          <p>더보기</p>
+          <ul class="header-list">
+            <li>리플렛보기</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- screen 에 들어갈 동영상 -->
+    <div class="screen-vid">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mSXwPLXHoS4?si=YWANlveveOj4czYt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div id="done" class="done">
+        <a><img src="./img/icon/Close_icon2.png" alt="닫기"></a>
+      </div>
+    </div>
+
+
+  <!-- screen 에 들어갈 동영상 -->    
+
+  <!-- background-color -->
+  <div class="background"></div>
+  <script>
+    $(document).ready(function(){
+      const panorama = new PANOLENS.ImagePanorama('./img/park_screen.jpg');
+      const viewer = new PANOLENS.Viewer({
+        output: 'console'});
+      viewer.add(panorama);
+
+      //스크린 자세히 보기
+      var infospot = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon5.png');
+      infospot.position.set(1383.46, 630.47, -5000.00);
+      // 스크린 팝업?
+
+      // 기념품쪽 이동버튼
+      var infospot1 = new PANOLENS.Infospot(500, './img/icon/Move_icon9.png');
+      infospot1.position.set(5000.00, -1702.35, -686.68);
+      infospot1.addEventListener('click', function () {
+      window.location.href = './park_gift.html'
+      });
+
+      // 다도체험 이동버튼
+      var infospot2 = new PANOLENS.Infospot(500, './img/icon/Move_icon10.png');
+      infospot2.position.set(-5000.00, -1590.93, -1835.98);
+      infospot2.addEventListener('click', function () {
+      window.location.href = './park_tea.html'
+      });
+
+      // 캠프장 이동버튼
+      var infospot3 = new PANOLENS.Infospot(500, './img/icon/Move_icon11.png');
+      infospot3.position.set(-5000.00, -1665.63, 3630.90);
+      infospot3.addEventListener('click', function () {
+      window.location.href = './park_camp.html'
+      });
+
+
+      //로비로 돌아가기 버튼
+      var infospot4 = new PANOLENS.Infospot(500, './img/icon/lobby_arrow.png');
+      infospot4.position.set(240.49, -1755.26, 5000.00);
+      infospot4.addEventListener('click', function () {
+      window.location.href = './lobby.html'
+      });      
+
+      //시작으로 돌아가기 버튼
+      var infospot5 = new PANOLENS.Infospot(500, './img/icon/Move_icon27.png');
+      infospot5.position.set(3305.40, -1333.94, 5000.00);
+      infospot5.addEventListener('click', function () {
+      window.location.href = './park_start.html'
+      });  
+      panorama.add(infospot);
+      panorama.add(infospot1);
+      panorama.add(infospot2);
+      panorama.add(infospot3);
+      panorama.add(infospot4);
+      panorama.add(infospot5);
+
+
+
+      //screen 동영상 켜기
+      $(infospot).click(function () {
+        $('.screen-vid').show();
+        $('.background').show();
+        $('.done').show()
+        });
+
+      //screen 동영상끄기
+      $('.done').click(function () {
+        $('.screen-vid').hide();
+        $('.background').hide();
+        $('.done').hide();
+        });       
+    });
+  </script>
+</body>
+</html>

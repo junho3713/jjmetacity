@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>민원실 : 민원창구</title>
+    <link rel="icon" href="./img/jjmeta-favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/office.css">
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+
+  <!-- 하단 메뉴 공통단 html에 작성 후 index.js로 이동후 공통관리 (해더, 푸터)-->
+  <div class="common">
+    <div class="top-header">
+      <div class="header-icon">
+        <div><a href="./lobby.html"><img src="./img/icon/home_icon.png" alt="Home"></a>
+          <p>로비이동</p>
+        </div>
+        <div class="map_icon"><a><img src="./img/icon/map_icon.png" alt="map"></a>
+          <p>지도보기</p>
+          <div class="header-list-map">
+            <div class="map-wrap">
+              <div class="map_list">
+                <a href="./park_start.html" class="map_item"><img src="./img/map_off(1).png" alt="야외대강당"></a>
+                <a href="./library_sub3.html" class="map_item"><img src="./img/map_off(2).png" alt="도서관"></a>
+              </div>
+              <div class="map_list">
+                <div class="map_item map_item2"><a href="./lobby.html"><img src="./img/map_off(4).png" alt="로비이동"></a></div>
+              </div>
+              <div class="map_list">
+                <a href="./hanbok_start.html" class="map_item"><img src="./img/map_off(3).png" alt=" 한복체험"></a>
+                <a href="./office_start.html" class="map_item"><img src="./img/map_off(5).png" alt="민원실"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><a href="#"><img src="./img/icon/hamburger_icon.png" alt="more"></a>
+          <p>더보기</p>
+          <ul class="header-list">
+            <li>리플렛보기</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 챗봇 버튼 -->
+  <div id="askbtn" class="askbtn">
+    <div class="ask-btn"><a href="#"><img src="./img/ask1_ui.png" alt="이용안내"></a></div>
+    <div class="click">
+      <a href="#"><img src="./img/icon/resi_icon_click.png" alt="주민등록"></a>
+    </div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/Close_icon.png" alt="닫기"></a>
+    </div>
+  </div>
+  <!-- 챗봇내부이미지변경 -->
+  <div id="askbtn2" class="askbtn2">
+    <div class="ask-btn2"><a href="#"><img src="./img/ask2_ui.png" alt="이용안내2"></a></div>
+    <div id="done3" class="done3">
+      <a><img src="./img/icon/Close_icon8.png" alt="닫기"></a>
+    </div>
+  </div>
+<!-- //챗봇 버튼 -->
+
+  <!-- 팜플렛 팝업 -->
+  <div id="pambtn" class="pambtn">
+    <div class="pam-btn"><a href="#"><img src="./img/leaf1.png" alt="팜플렛펼쳐보기1"></a></div>
+    <div class="pam_click">
+      <a href="#"><img src="./img/icon/next_icon2.png" alt="다음페이지"></a>
+    </div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/Close_icon4.png" alt="완료"></a>
+    </div>
+  </div>
+
+  <!-- 팜플렛이미지변경 -->
+  <div id="pambtn2" class="pambtn2">
+    <div class="pam-btn2"><a href="#"><img src="./img/leaf2.png" alt="팜플렛펼쳐보기2"></a></div>
+    <div class="pam_click2">
+      <a href="#"><img src="./img/icon/prev_icon.png" alt="다음페이지"></a>
+    </div>
+    <div id="done4" class="done4">
+      <a><img src="./img/icon/Close_icon9.png" alt="닫기"></a>
+    </div>
+  </div>
+
+<!-- //팜플렛 팝업 -->
+
+
+    <!-- 민원작성폼 버튼 -->
+    <div id="formbtn" class="formbtn">
+      <div class="form-btn"><img src="./img/form_list.jpg" alt="민원작성폼">
+      <!-- 각 버튼들  -->
+      <div class="form-btns1">
+        <a href="#"><img class="form1" src="./img/icon/form_btn1.png" alt="제적등본"></a>
+        <a href="#"><img class="form2" src="./img/icon/form_btn2.png" alt="토지대장"></a>
+        <a href="#"><img class="form3" src="./img/icon/form_btn3.png" alt="건축물대장"></a>
+      </div>
+      <div class="form-btns2">
+        <a href="#"><img class="form4" src="./img/icon/form_btn4.png" alt="지방세제증명"></a>
+        <a href="#"><img class="form5" src="./img/icon/form_btn5.png" alt="주민등록초본"></a>
+        <a href="#"><img class="form6" src="./img/icon/form_btn6.png" alt="지적도발급"></a>
+      </div>
+      <div class="form-btns3">
+        <a href="#"><img class="form7" src="./img/icon/form_btn7.png" alt="병적증명"></a>
+        <a href="#"><img class="form8" src="./img/icon/form_btn8.png" alt="전입신고"></a>
+        <a href="#"><img class="form9" src="./img/icon/form_btn9.png" alt="여권신청"></a>
+      </div>
+      </div>
+      <!-- //민원작성폼 닫기 버튼 -->
+      <div id="done" class="done">
+        <a><img src="./img/icon/form_Close_icon.png" alt="닫기"></a>
+      </div>
+
+      <!-- 제적등본 -->
+      <div class="formtab-img">
+        <div class="formimg1"><img src="./img/form_img1.jpg" alt="제적등본">
+        <div id="done2" class="done2">
+          <a><img src="./img/icon/form_Close2.png" alt="닫기"></a></div>
+        <div class="submit_btn">
+          <a href="./office_desk.html"><img src="./img/icon/write_icon2.png" alt="작성하기"></a>
+        </div>
+        </div>
+      </div>  
+      <!-- 제적등본 -->
+
+      <!-- 토지대장 -->
+      <div class="formtab-img2">
+        <div class="formimg2"><img src="./img/form_img2.jpg" alt="토지대장">
+        <div id="done2" class="done2">
+          <a><img src="./img/icon/form_Close2.png" alt="닫기"></a></div>
+        <div class="submit_btn">
+          <a href="./office_desk.html"><img src="./img/icon/write_icon2.png" alt="작성하기"></a>
+        </div>
+        </div>
+      </div>  
+      <!-- 토지대장 -->
+
+      <!-- 건축물대장 -->
+      <div class="formtab-img3">
+        <div class="formimg3"><img src="./img/form_img3.jpg" alt="건축물대장">
+        <div id="done2" class="done2">
+          <a><img src="./img/icon/form_Close2.png" alt="닫기"></a></div>
+        <div class="submit_btn">
+          <a href="./office_start.html"><img src="./img/icon/write_icon2.png" alt="작성하기"></a>
+        </div>
+        </div>
+      </div>  
+      <!-- 건축물대장 -->
+
+
+    <!-- // 민원(여권)작성폼 버튼-->
+
+
+
+    </div>
+  <!-- background -->
+  <div class="background"></div>
+  <script>
+    $(document).ready(function(){
+      const panorama = new PANOLENS.ImagePanorama('./img/office-desk.jpg');
+      const viewer = new PANOLENS.Viewer({
+        output: 'console'});
+      viewer.add(panorama);
+
+
+
+
+
+
+      //뒤로(처음위치) 이동버튼
+      var infospot = new PANOLENS.Infospot(500, './img/icon/Move_icon18.png');
+      infospot.position.set(5000.00, -1519.52, 715.37);
+      infospot.addEventListener('click', function () {
+      window.location.href = './office_start.html'
+      });
+
+      //키오스크 이동버튼
+      var infospot1 = new PANOLENS.Infospot(500, './img/icon/Move_icon21.png');
+      infospot1.position.set(-3604.68, -1819.49, 5000.00);
+      infospot1.addEventListener('click', function () {
+      window.location.href = './office_kiosk.html'
+      });
+
+
+      //팜플렛 자세히 보기 버튼
+      var infospot2 = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon10.png');
+      infospot2.position.set(2108.17, -341.10, -5000.00);
+      infospot2.addEventListener('click', function () {
+      infospot2.addHoverElement(document.getElementById('pambtn'), 100);
+      }); 
+      
+      
+
+      //로비로 돌아가기 버튼
+      var infospot3 = new PANOLENS.Infospot(500, './img/icon/lobby_arrow.png');
+      infospot3.position.set(5000.00, 98.56, 2116.81);
+      infospot3.addEventListener('click', function () {
+      window.location.href = './lobby.html'
+      });
+
+
+      //챗봇 버튼
+      var infospot4 = new PANOLENS.Infospot(500, './img/icon/serviceask_icon2.png');
+      infospot4.position.set(-196.70, 155.15, -5000.00);
+      infospot4.addEventListener('click', function () {
+      infospot4.addHoverElement(document.getElementById('askbtn'), 100);
+      });     
+
+
+      //민원신청 양식 버튼
+      var infospot5 = new PANOLENS.Infospot(500, './img/icon/formarrow.png');
+      infospot5.position.set(2149.04, -849.32, 5000.00);
+      infospot5.addEventListener('click', function () {
+      infospot5.addHoverElement(document.getElementById('formbtn'), 100);
+      });      
+
+    
+      panorama.add(infospot);
+      panorama.add(infospot1);
+      panorama.add(infospot2);
+      panorama.add(infospot3);
+      panorama.add(infospot4);
+      panorama.add(infospot5);
+
+
+      //챗봇 켜기
+      $(infospot4).click(function () {
+        $('.askbtn').show();
+        $('.background').show();
+        $('.done').show()
+        });
+
+      // 챗봇 끄기
+      $('.done').click(function () {
+        $('.askbtn').hide();
+        $('.background').hide();
+        $('.done').hide();
+        }); 
+
+
+      // 챗봇 주민등록 팝업 뜨기
+      $('.click').click(function () {
+        $('.askbtn2').show();
+        $('.askbtn').hide();
+        $('.click').hide();
+        $('.done').hide();
+        
+        });
+
+      // 챗봇 주민등록 팝업 끄기
+      $('.done3').click(function () {
+        $('.askbtn').hide();
+        $('.askbtn2').hide();
+        $('.background').hide();
+        $('.click').show();
+        $('.done').show();
+        });
+
+
+
+      //팜플렛 켜기
+      $(infospot2).click(function () {
+        $('.pambtn').show();
+        $('.background').show();
+        });
+
+      // 팜플렛 끄기
+      $('.done').click(function () {
+        $('.pambtn').hide();
+        $('.background').hide();
+        $('.done').show();
+        }); 
+
+
+      // 팜플렛2 팝업 뜨기
+      $('.pam_click').click(function () {
+        $('.pambtn2').show();
+        $('.pambtn').hide();
+        $('.done4').show();
+        $('.pam_click2').show();
+        });
+   
+      // 팜플렛 이전으로 돌아가기
+      $('.pam_click2').click(function () {
+        $('.pambtn').show();
+        $('.done').show();
+        $('.pambtn2').hide();
+        $('.done4').hide();
+        });  
+        
+        
+      // 팜플렛2 팝업 끄기
+      $('.done4').click(function () {
+        $('.pambtn').hide();
+        $('.pambtn2').hide();
+        $('.background').hide();
+        $('.pam_click').show();
+        $('.done').show();
+        });  
+
+
+      // 민원신청 팝업 열기
+      $(infospot5).click(function () {
+      $('.formbtn').show();
+      $('.background').show();
+      });
+
+      // 민원신청 팝업 끄기
+      $('.done').click(function () {
+      $('.formbtn').hide();
+      $('.background').hide()
+      });
+
+
+
+      // 제적등본 팝업 열기
+      $('.form1').click(function () {
+      $('.formimg1 img').show();
+      $('.background').show();
+      $('.formbtn .form-btn img').hide();
+      $('.done').hide()
+      });
+
+      // 제적등본 팝업 끄기
+      $('.done2').click(function () {
+      $('.formimg1 img').hide();
+      $('.formbtn .form-btn img').show();
+      $('.background').show()
+      $('.done').show()
+      });
+
+      // 제출후 제적등본 팝업 끄기
+      $('.submit_btn').click(function () {
+      $('.formimg1 img').hide();
+      $('.background').hide()
+      $('.done2').hide()
+      $('.formbtn').hide();
+      });
+
+
+      // 토지대장 팝업 열기
+      $('.form2').click(function () {
+      $('.formimg2 img').show();
+      $('.background').show();
+      $('.formbtn .form-btn img').hide();
+      $('.done').hide()
+      });
+
+      // 토지대장 팝업 끄기
+      $('.done2').click(function () {
+      $('.formimg2 img').hide();
+      $('.formbtn .form-btn img').show();
+      $('.background').show()
+      $('.done').show()
+      });
+
+      // 제출후 토지대장 팝업 끄기
+      $('.submit_btn').click(function () {
+      $('.formimg3 img').hide();
+      $('.background').hide()
+      $('.done2').hide()
+      $('.formbtn').hide();
+      });      
+
+  
+      
+      // 건축물대장 팝업 열기
+      $('.form3').click(function () {
+      $('.formimg3 img').show();
+      $('.background').show();
+      $('.formbtn .form-btn img').hide();
+      $('.done').hide()
+      });
+
+      // 건축물대장 팝업 끄기
+      $('.done2').click(function () {
+      $('.formimg3 img').hide();
+      $('.formbtn .form-btn img').show();
+      $('.background').show()
+      $('.done').show()
+      });
+
+      // 제출후 건축물대장 팝업 끄기
+      $('.submit_btn').click(function () {
+      $('.formimg3 img').hide();
+      $('.background').hide()
+      $('.done2').hide()
+      $('.formbtn').hide();
+      });     
+
+        
+    });
+  </script>
+</body>
+</html>

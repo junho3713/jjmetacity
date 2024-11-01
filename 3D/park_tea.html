@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야외대강당 : 다도</title>
+    <link rel="icon" href="./img/jjmeta-favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/park.css">
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+  <!-- 하단 메뉴 공통단 html에 작성 후 index.js로 이동후 공통관리 (해더, 푸터)-->
+  <div class="common">
+    <div class="top-header">
+      <div class="header-icon">
+        <div><a href="./lobby.html"><img src="./img/icon/home_icon.png" alt="Home"></a>
+          <p>로비이동</p>
+        </div>
+        <div class="map_icon"><a><img src="./img/icon/map_icon.png" alt="map"></a>
+          <p>지도보기</p>
+          <div class="header-list-map">
+            <div class="map-wrap">
+              <div class="map_list">
+                <a href="./park_start.html" class="map_item"><img src="./img/map_off(1).png" alt="야외대강당"></a>
+                <a href="./library_sub3.html" class="map_item"><img src="./img/map_off(2).png" alt="도서관"></a>
+              </div>
+              <div class="map_list">
+                <div class="map_item map_item2"><a href="./lobby.html"><img src="./img/map_off(4).png" alt="로비이동"></a></div>
+              </div>
+              <div class="map_list">
+                <a href="./hanbok_start.html" class="map_item"><img src="./img/map_off(3).png" alt=" 한복체험"></a>
+                <a href="./office_start.html" class="map_item"><img src="./img/map_off(5).png" alt="민원실"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><a href="#"><img src="./img/icon/hamburger_icon.png" alt="more"></a>
+          <p>더보기</p>
+          <ul class="header-list">
+            <li>리플렛보기</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 왕 설명 팝업 -->
+  <div id="kinginfobtn" class="kinginfobtn">
+    <div class="kinginfo-btn"><a href=""><img src="./img/king_info.png" alt="왕에대한설명"></a>
+      <div id="done" class="done">
+        <a><img src="./img/icon/king_Close_icon.png" alt="닫기"></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- background-color -->
+  <div class="background"></div>
+
+
+  <script>
+    $(document).ready(function(){
+      const panorama = new PANOLENS.ImagePanorama('./img/park_tea.jpg');
+      const viewer = new PANOLENS.Viewer({
+        output: 'console'});
+      viewer.add(panorama);
+
+
+
+
+      //로비로 가기 버튼
+      var infospot2 = new PANOLENS.Infospot(500, './img/icon/lobby_arrow.png');
+      infospot2.position.set(-5000.00, -1372.52, 2663.29);
+      infospot2.addEventListener('click', function () {
+      window.location.href = './lobby.html'
+      });
+
+      //시작으로 돌아가기 버튼
+      var infospot3 = new PANOLENS.Infospot(500, './img/icon/Move_icon27.png');
+      infospot3.position.set(-5000.00, -2853.64, 4033.06);
+      infospot3.addEventListener('click', function () {
+      window.location.href = './park_screen.html'
+      });  
+
+      panorama.add(infospot2);
+      panorama.add(infospot3);
+
+
+  
+    });
+  </script>
+</body>
+</html>

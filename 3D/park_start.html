@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야외대강당</title>
+    <link rel="icon" href="./img/jjmeta-favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/park.css">
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+  <!-- 하단 메뉴 공통단 html에 작성 후 index.js로 이동후 공통관리 (해더, 푸터)-->
+  <div class="common">
+    <div class="top-header">
+      <div class="header-icon">
+        <div><a href="./lobby.html"><img src="./img/icon/home_icon.png" alt="Home"></a>
+          <p>로비이동</p>
+        </div>
+        <div class="map_icon"><a><img src="./img/icon/map_icon.png" alt="map"></a>
+          <p>지도보기</p>
+          <div class="header-list-map">
+            <div class="map-wrap">
+              <div class="map_list">
+                <a href="./park_start.html" class="map_item"><img src="./img/map_off(1).png" alt="야외대강당"></a>
+                <a href="./library_sub3.html" class="map_item"><img src="./img/map_off(2).png" alt="도서관"></a>
+              </div>
+              <div class="map_list">
+                <div class="map_item map_item2"><a href="./lobby.html"><img src="./img/map_off(4).png" alt="로비이동"></a></div>
+              </div>
+              <div class="map_list">
+                <a href="./hanbok_start.html" class="map_item"><img src="./img/map_off(3).png" alt=" 한복체험"></a>
+                <a href="./office_start.html" class="map_item"><img src="./img/map_off(5).png" alt="민원실"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><a href="#"><img src="./img/icon/hamburger_icon.png" alt="more"></a>
+          <p>더보기</p>
+          <ul class="header-list">
+            <li>리플렛보기</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 행사안내팝업 -->
+  <div id="infobtn" class="infobtn">
+    <div class="info-btn"><a href=""><img src="./img/park_info1.png" alt="행사안내"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/Close_icon.png" alt="완료"></a>
+    </div>
+  </div>
+
+  <!-- 왕 설명 팝업 -->
+  <div id="kingbtn" class="kingbtn">
+    <div class="king-btn"><a href=""><img src="./img/park_king_ui.png" alt="세종대왕"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/king_close_icon.png" alt="완료"></a>
+    </div>
+  </div>  
+
+  <!-- 왕 설명 팝업2 -->
+  <div id="kingbtn2" class="kingbtn2">
+    <div class="king-btn2"><a href=""><img src="./img/king_info2.png" alt="태종이방원"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/king_close_icon2.png" alt="완료"></a>
+    </div>
+  </div>  
+  
+  <!-- 왕 설명 팝업3 -->
+  <div id="kingbtn3" class="kingbtn3">
+    <div class="king-btn3"><a href=""><img src="./img/king_info3.png" alt="태조이성계"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/king_close_icon3.png" alt="완료"></a>
+    </div>
+  </div>   
+
+  <!-- 행사안내2팝업 -->
+  <div id="infobtn2" class="infobtn2">
+    <div class="info-btn2"><a href=""><img src="./img/park_info2.jpg" alt="기념품안내"></a></div>
+    <div id="done" class="done">
+      <a><img src="./img/icon/Close_icon.png" alt="완료"></a>
+    </div>
+  </div>
+  
+  
+  <!-- 팝업 background-블러 -->
+  <div class="background"></div>
+
+
+
+  
+  <script>
+    $(document).ready(function(){
+      const panorama = new PANOLENS.ImagePanorama('./img/park_start.jpg');
+      const viewer = new PANOLENS.Viewer({
+        output: 'console'});
+      viewer.add(panorama);
+
+      //왼쪽(지하여장군)이동버튼
+      var infospot = new PANOLENS.Infospot(500, './img/icon/Move_icon6.png');
+      infospot.position.set(-5000.00, -2574.66, -4497.17);
+      infospot.addEventListener('click', function () {
+      window.location.href = './park_camp.html'
+      });
+
+      //오른쪽(천하대장군)이동버튼
+      var infospot1 = new PANOLENS.Infospot(500, './img/icon/Move_icon7.png');
+      infospot1.position.set(5000.00, -2233.80, -4212.98);
+      infospot1.addEventListener('click', function () {
+      window.location.href = './park_screen.html'
+      });
+
+      //행사안내버튼
+      var infospot2 = new PANOLENS.Infospot(500, './img/icon/largeview_icon6.png');
+      infospot2.position.set(-648.67, -146.70, -5000.00);
+      infospot2.addEventListener('click', function () {
+      infospot2.addHoverElement(document.getElementById('infobtn'), 100);
+      });
+    
+      
+      //로비로 돌아가기 버튼
+      var infospot3 = new PANOLENS.Infospot(500, './img/icon/lobby_arrow.png');
+      infospot3.position.set(41.89, -530.96, 5000.00);
+      infospot3.addEventListener('click', function () {
+      window.location.href = './lobby.html'
+      });
+
+      //왕에대한 설명 버튼
+      var infospot4 = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon13.png');
+      infospot4.position.set(5000.00, -558.72, -2971.10);
+      infospot4.addEventListener('click', function () {
+      infospot4.addHoverElement(document.getElementById('kingbtn'), 100);
+      });
+
+
+      //행사안내버튼2
+      var infospot5 = new PANOLENS.Infospot(500, './img/icon/largeview_icon10.png');
+      infospot5.position.set(620.85, -417.52, -5000.00);
+      infospot5.addEventListener('click', function () {
+      infospot5.addHoverElement(document.getElementById('infobtn2'), 100);
+      });  
+
+      //왕에대한 설명 버튼2
+      var infospot6 = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon15.png');
+      infospot6.position.set(5000.00, -394.00, -1657.07);
+      infospot6.addEventListener('click', function () {
+      infospot6.addHoverElement(document.getElementById('kingbtn2'), 100);
+      });      
+
+      //왕에대한 설명 버튼3
+      var infospot7 = new PANOLENS.Infospot(500, './img/icon/touch_finger_icon16.png');
+      infospot7.position.set(5000.00, -380.48, -3863.65);
+      infospot7.addEventListener('click', function () {
+      infospot7.addHoverElement(document.getElementById('kingbtn3'), 100);
+      });        
+
+
+      panorama.add(infospot);
+      panorama.add(infospot1);
+      panorama.add(infospot2);
+      panorama.add(infospot3);
+      panorama.add(infospot4);
+      panorama.add(infospot5);
+      panorama.add(infospot6);
+      panorama.add(infospot7);
+
+
+
+
+      //행사안내 팝업 열기**************
+      $(infospot2).click(function () {
+        $('.infobtn').show();
+        $('.background').show();
+        });
+
+        //행사안내 팝업 끄기
+        $('.done').click(function () {
+        $('.infobtn').hide();
+        $('.background').hide()
+        });
+ 
+      //왕설명 팝업 열기**************
+      $(infospot4).click(function () {
+        $('.kingbtn').show();
+        $('.background').show();
+        });
+
+        //왕설명 팝업 끄기
+        $('.done').click(function () {
+        $('.kingbtn').hide();
+        $('.background').hide()
+        });   
+
+      //왕설명 팝업2 열기**************
+      $(infospot6).click(function () {
+        $('.kingbtn2').show();
+        $('.background').show();
+        });
+
+        //왕설명2 팝업 끄기
+        $('.done').click(function () {
+        $('.kingbtn2').hide();
+        $('.background').hide()
+        });    
+        
+        
+      //왕설명 팝업3 열기**************
+      $(infospot7).click(function () {
+        $('.kingbtn3').show();
+        $('.background').show();
+        });
+
+        //왕설명3 팝업 끄기
+        $('.done').click(function () {
+        $('.kingbtn3').hide();
+        $('.background').hide()
+        }); 
+
+
+      //행사안내 팝업2 열기**************
+      $(infospot5).click(function () {
+        $('.infobtn2').show();
+        $('.background').show();
+        });
+
+        //행사안내 팝업 끄기
+        $('.done').click(function () {
+        $('.infobtn2').hide();
+        $('.background').hide()
+        });             
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+/* kiosk */
+
+/* 키오스크 팝업 */
+
+#kioskbtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 940px;
+  height: 700px;
+  z-index: 999;
+}
+#kioskbtn img{
+  width: 90%;
+}
+
+#kioskbtn .kiosk-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+#kioskbtn #done{
+  position: absolute;
+  top:5px;
+  right:40px;
+  cursor: pointer;
+}
+
+#kioskbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 70px;
+  top:0;
+}
+
+/* //키오스크 팝업 */
+
+
+
+
+/* fax 팝업 */
+
+#faxbtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 940px;
+  height: 700px;
+  z-index: 999;
+}
+#faxbtn img{
+  width: 90%;
+}
+
+#faxbtn .fax-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+#faxbtn #done{
+  position: absolute;
+  top:5px;
+  right:40px;
+  cursor: pointer;
+}
+
+#faxbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 70px;
+  top:0;
+}
+
+/* //fax 팝업 */      
+
+/* //kiosk */
+
+
+/* 민원창구 */
+
+/*챗봇*/
+
+#askbtn{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ display: none;
+ width: 1100px;
+ height: 700px;
+ z-index: 999;
+}
+
+#askbtn .ask-btn{
+ position: absolute;
+ bottom:0;
+}
+
+/* 주민등록 버튼 클릭 */
+
+#askbtn .click{
+ position: absolute;
+ top:344px;
+ left:233px;
+ z-index: 999;
+
+}
+
+/* 닫기버튼 */
+
+#askbtn #done{
+ position: absolute;
+ top:20px;
+ right:10px;
+ cursor: pointer;
+}
+
+#askbtn #done a img{
+ width: 50%;
+ position: relative;
+ left: 50px;
+}
+
+
+/*민원신청 팝업 > 내부팝업*/
+.askbtn2{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+width: 1100px;
+height: 700px;
+display: none;
+z-index: 999;
+}
+
+.askbtn2 #done3{
+position: absolute;
+top:24px;
+right:-40px;
+cursor: pointer;
+}
+
+.askbtn2  #done3 img{
+ width: 50%;
+ cursor: pointer;
+}
+
+
+
+/* // 민원창구 */
+
+/* 팜플렛 팝업 */
+
+#pambtn{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-42%, -50%);
+    display: none;
+    width: 1100px;
+    height: 800px;
+    z-index: 999;
+  }
+#pambtn img{
+    width: 90%;
+  }
+  
+#pambtn .pam-btn{
+    position: absolute;
+    bottom:0;
+  }
+  
+/* 닫기버튼 */
+#pambtn #done{
+    position: absolute;
+    top:130px;
+    right:160px;
+    cursor: pointer;
+  }
+  
+#pambtn #done a img{
+    width: 50%;
+    position: relative;
+    left: 70px;
+    top:0;
+  }
+
+/* 다음 팜플렛 열기  */
+
+#pambtn .pam_click{
+  position: absolute;
+  bottom:-150px;
+  left:450px
+}
+  
+
+/*팜플렛 팝업 > 내부팝업*/
+#pambtn2 img{
+  width: 90%;
+} 
+
+.pambtn2 .pam_click{
+  position: absolute;
+}
+
+.pambtn2{
+  position: absolute;
+  top: 54%;
+  left: 55%;
+  transform: translate(-54%, -55%);
+  display: none;
+  width: 1100px;
+  height: 800px;
+  z-index: 999;
+  }
+  
+  .pambtn2 #done4{
+    position: absolute;
+    top:30px;
+    right:150px;
+    cursor: pointer;
+  }
+  
+  .pambtn2  #done4 a img{
+    width: 50%;
+    position: relative;
+    left: 70px;
+    top:0;
+  }
+  .pambtn2 .pam_click2{
+    position: absolute;
+    bottom:-50px;
+    left:450px;
+  }
+
+
+  /* //팜플렛 팝업 */   
+
+
+/* 각 민원신청 버튼 */
+
+#formbtn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 1100px;
+  height: 700px;
+  z-index: 999;
+}
+
+#formbtn .form-btn{
+position: absolute;
+bottom:0;
+}
+
+
+#formbtn .form-btn{
+position: relative;
+}
+
+#formbtn .form-btn .form-btns1{
+position: absolute;
+top:35%;
+transform: translateY(-35%);
+left:150px;
+}
+#formbtn .form-btn .form-btns2{
+position: absolute;
+top:57%;
+transform: translateY(-57%);
+left:150px;
+}
+#formbtn .form-btn .form-btns3{
+position: absolute;
+top:79%;
+transform: translateY(-79%);
+left:150px;
+}
+
+
+
+/* 닫기버튼 */
+#formbtn #done{
+  position: absolute;
+  top:5px;
+  right:10px;
+  cursor: pointer;
+}
+
+
+
+/*민원신청 팝업 > 내부팝업:제적등본*/
+.formtab-img{
+  position: relative;
+}
+
+.formtab-img  #done2{
+  position: absolute;
+  top:8px;
+  right:90px;
+  cursor: pointer;
+}
+
+.formtab-img .submit_btn{
+  position: absolute;
+  top:540px;
+  right:400px;
+  cursor: pointer;
+}
+
+
+/* 민원 팝업 띄우기 */
+#formbtn .formtab-img .formimg1 img{
+  position: absolute;
+  display: none;
+  z-index: 999;
+}
+
+#formbtn .formtab-img #done{
+  position: absolute;
+  top:5px;
+  right:90px;
+  cursor: pointer;
+}
+/* // 민원신청 팝업 > 내부팝업:제적등본*/
+
+
+
+/*민원신청 팝업 > 내부팝업:토지대장*/
+.formtab-img2{
+  position: relative;
+}
+
+.formtab-img2  #done2{
+  position: absolute;
+  top:8px;
+  right:90px;
+  cursor: pointer;
+}
+
+.formtab-img2 .submit_btn{
+  position: absolute;
+  top:540px;
+  right:400px;
+  cursor: pointer;
+}
+
+/* 민원 팝업 띄우기 */
+#formbtn .formtab-img2 .formimg2 img{
+  position: absolute;
+  display: none;
+  z-index: 999;
+}
+
+#formbtn .formtab-img2 #done{
+  position: absolute;
+  top:5px;
+  right:90px;
+  cursor: pointer;
+}
+/* //민원신청 팝업 > 내부팝업:토지대장*/
+
+
+
+/*민원신청 팝업 > 내부팝업:건축물대장*/
+.formtab-img3{
+  position: relative;
+}
+
+.formtab-img3  #done2{
+  position: absolute;
+  top:8px;
+  right:90px;
+  cursor: pointer;
+}
+
+.formtab-img3 .submit_btn{
+  position: absolute;
+  top:595px;
+  right:600px;
+  cursor: pointer;
+}
+
+/* 민원 팝업 띄우기 */
+#formbtn .formtab-img3 .formimg3 img{
+  position: absolute;
+  display: none;
+  z-index: 999;
+}
+
+#formbtn .formtab-img3 #done{
+  position: absolute;
+  top:5px;
+  right:90px;
+  cursor: pointer;
+
+}
+/* //민원신청 팝업 > 내부팝업:건축물대장*/
+
+
+
+/* // 민원창구 */
+
+
+/* 캘린더 팝업 */
+
+#calbtn{
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -55%);
+  display: none;
+  width: 940px;
+  height: 700px;
+  z-index: 999;
+}
+#calbtn img{
+  width: 90%;
+}
+
+#calbtn .cal-btn{
+  position: absolute;
+  bottom:0;
+}
+
+/* 닫기버튼 */
+#calbtn #done{
+  position: absolute;
+  top:5px;
+  right:200px;
+  cursor: pointer;
+}
+
+#calbtn #done a img{
+  width: 50%;
+  position: relative;
+  left: 70px;
+  top:0;
+}
+
+/* //키오스크 팝업 */
